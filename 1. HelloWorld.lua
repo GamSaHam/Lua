@@ -1,8 +1,6 @@
 
-local function main()
+function main()
 	print('Hello World');
 end
-
-
 
 main();
