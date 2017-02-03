@@ -1,5 +1,6 @@
 
 -- 코루틴 기본 개념
+-- coroutine.create, coroutine.start, coroutine.wrap, coroutine.status, coroutine.running
 --[[
 co = coroutine.create(function()
     print('hi')
@@ -72,5 +73,19 @@ co_wrap();
 --]]
 
 
+--------------------------------------------
+-- coroutine.running
+--------------------------------------------
+co = coroutine.create(function()
 
+	print(coroutine.running())
+
+	while(true) do
+
+		coroutine.yield()
+	end
+
+end)
+
+coroutine.resume(co)
 
